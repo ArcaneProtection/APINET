@@ -1,4 +1,9 @@
 <?php
+/*
+Copyright 2020 por Arcane Protection
+License: LICENSE.md
+URL License: https://arcaneprotection.net/LICENSE_APINET/LICENSE.md
+ */
 require("APINET.php");
 $version_nueva = file_get_contents(MIGUELURL."UPDATE_CONTROL/WEB/Version.php");
 $version_nueva = json_decode($version_nueva);
