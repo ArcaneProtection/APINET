@@ -1,4 +1,11 @@
 <?php
+/*
+
+Copyright 2020 por Arcane Protection
+License: LICENSE.md
+URL License: https://arcaneprotection.net/LICENSE_APINET/LICENSE.md
+
+ */
 $APINET_VERSION = "1.3.0";
 define("MIGUELURL",     "https://arcaneprotection.net/");
 define("APINET_LI",     "License");
@@ -223,17 +230,10 @@ class APINET{
         return reply::host($data);
 	}
     public static function escudo_sql($data){
-        $li = self::key();
-        $dat = file_get_contents(MIGUELURL."API.php?TIPO=6&LI=".$li);
-        $dat = self::ud($dat);
-        $dat = unserialize($dat);
-        $dat = $dat['ZGF0YQ'];
-        $dat = self::dp($dat);
-        eval($dat);
+        $data = htmlspecialchars($data); $data = addslashes($data);
         return reply::host($data);
     }
     public static function token_f(){
-        session_start();
         $li = self::key();
         $token = file_get_contents(MIGUELURL."API.php?TIPO=12&LI=".$li);
         return $token;
