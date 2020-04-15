@@ -1,4 +1,9 @@
 <?php
+/*
+Copyright 2020 por Arcane Protection
+License: LICENSE.md
+URL License: https://arcaneprotection.net/LICENSE_APINET/LICENSE.md
+ */
 require("APINET.php");
 $rauter_file = "Rauter_Updating.APINET";
 $file_file = "File_Updating.APINET";
